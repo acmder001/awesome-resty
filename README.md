@@ -58,6 +58,7 @@ There are at least three different ways to contribute:
   * [Date and Time](#date-and-time)
   * [Compression](#compression)
   * [Text Formats](#text-formats)
+  * [Binary Formats](#binary-formats)
   * [Document Formats](#document-formats)
   * [Image Formats](#image-formats)
   * [Localization](#localization)
@@ -183,6 +184,7 @@ Core Libraries are bundled in OpenResty package, and you don't need to separatel
 * [lua-resty-lock](https://github.com/openresty/lua-resty-lock) — Simple nonblocking lock API for ngx_lua based on shared memory dictionaries
 * [lua-resty-lrucache](https://github.com/openresty/lua-resty-lrucache) — Lua-land LRU Cache based on LuaJIT FFI
 * [lua-resty-dns](https://github.com/openresty/lua-resty-dns) — DNS resolver for the Nginx Lua module
+* [lua-resty-resolver](https://github.com/jkeys089/lua-resty-resolver) — Caching DNS resolver for ngx_lua and LuaJIT
 * [lua-resty-upload](https://github.com/openresty/lua-resty-upload) — Streaming reader and parser for HTTP file uploading based on ngx_lua cosocket
 * [lua-resty-websocket](https://github.com/openresty/lua-resty-websocket) — Lua WebSocket implementation for the ngx_lua module
 * [lua-resty-mysql](https://github.com/openresty/lua-resty-mysql) — Non-blocking Lua MySQL client driver for ngx_lua based on the cosocket API
@@ -243,7 +245,7 @@ Core Libraries are bundled in OpenResty package, and you don't need to separatel
 
 #### Middleware and API Tools
 
-* [Kong](https://getkong.org/) ([GitHub](https://github.com/Mashape/kong)) — KONG: Microservice Management Layer (Secure, Manage & Extend your APIs and Microservices)
+* [Kong](https://getkong.org/) ([GitHub](https://github.com/Kong/kong)) — KONG: Microservice Management Layer (Secure, Manage & Extend your APIs and Microservices)
 * [LSSO](https://github.com/maiome-development/lsso) — A Lightweight SSO middleware for Nginx + Lua
 * [apigateway](https://github.com/adobe-apiplatform/apigateway) — A Performant API Gateway based on Nginx and OpenResty
 
@@ -285,7 +287,7 @@ Core Libraries are bundled in OpenResty package, and you don't need to separatel
 * [lua-resty-urandom](https://github.com/p0pr0ck5/lua-resty-urandom) — Buffered wrapper for Linux/BSD kernel space CSPRNG
 * [lua-resty-fastpbkdf2](https://github.com/mynameiscfed/lua-resty-fastpbkdf2) — Lua bindings to fastpbkdf2
 * [lua-argon2-ffi](https://github.com/thibaultCha/lua-argon2-ffi) — LuaJIT FFI binding for the Argon2 password hashing algorithm
-
+* [lua-resty-des](https://github.com/lilien1010/lua-resty-des) — Lua interface to make DES ECB encryption
 
 #### Networking
 
@@ -297,10 +299,10 @@ Core Libraries are bundled in OpenResty package, and you don't need to separatel
 * [lua-resty-httpclient](https://github.com/oneoo/lua-resty-httpclient) — Nonblocking Lua HTTP Client library for aLiLua & ngx_lua
 * [lua-httpcli-resty](https://github.com/mah0x211/lua-httpcli-resty) — Lua HTTP client module for OpenResty
 * [lua-resty-websocket](https://github.com/openresty/lua-resty-websocket) — Lua WebSocket implementation for the ngx_lua module
-* [lua-resty-mediador](https://github.com/Mashape/lua-resty-mediador) — Determines address of proxied request and does IP address / CIDR blocks handling (both IPv4 and IPv6)
+* [lua-resty-mediador](https://github.com/Kong/lua-resty-mediador) — Determines address of proxied request and does IP address / CIDR blocks handling (both IPv4 and IPv6)
 * [lua-resty-iputils](https://github.com/hamishforbes/lua-resty-iputils) — Utility functions for working with IP addresses in OpenResty
 * [lua-resty-readurl](https://github.com/jamesmarlowe/lua-resty-readurl) — Lua library for capturing urls, decoding, and logging results
-* [lua-resty-dns-client](https://github.com/Mashape/lua-resty-dns-client) — Lua library containing a DNS client, several utilities, and a load-balancer
+* [lua-resty-dns-client](https://github.com/Kong/lua-resty-dns-client) — Lua library containing a DNS client, several utilities, and a load-balancer
 * [lua-resty-upstream](https://github.com/hamishforbes/lua-resty-upstream) — Upstream connection load balancing and failover module
 * [lua-resty-checkups](https://github.com/upyun/lua-resty-checkups) — Manage Nginx upstreams in pure ngx_lua
 * [lua-resty-socks5](https://github.com/starius/lua-resty-socks5) — Lua SOCKS5 client for the ngx_lua based on the cosocket API
@@ -314,24 +316,27 @@ Core Libraries are bundled in OpenResty package, and you don't need to separatel
 * [lua-capnproto](https://github.com/cloudflare/lua-capnproto) — Cap’n Proto is an insanely fast data interchange format and capability-based RPC system
 * [lua-resty-tornera](https://github.com/pinge/lua-resty-tornera) — A traffic replay tool with an easy to use HTTP API for OpenResty / LuaJIT
 * [lua-resty-consul](https://github.com/hamishforbes/lua-resty-consul) — Library to interface with the consul HTTP API from ngx_lua
-
+* [lua-resty-healthcheck](https://github.com/Kong/lua-resty-healthcheck) — Healthcheck library for OpenResty to validate upstream service status
 
 #### Databases and Storages
 
 * [lua-resty-mysql](https://github.com/openresty/lua-resty-mysql) — Non-blocking Lua MySQL client driver for ngx_lua based on the cosocket API
 * [lua-resty-postgres](https://github.com/azurewang/lua-resty-postgres) — Nonblocking Lua PostgreSQL driver library for ngx_lua
 * [pgmoon](https://github.com/leafo/pgmoon) — A pure Lua Postgres driver for use in OpenResy & more
+* [lua-resty-couchbase](https://github.com/ZigzagAK/lua-resty-couchbase) — OpenResty CouchBase module
 * [lua-resty-couchdb](https://github.com/paragasu/lua-resty-couchdb) — Lua resty minimal couchdb client using nginx proxy ngx.location_capture
 * [lua-resty-orm](https://github.com/kran/lua-resty-orm) — Simple ORM for OpenResty
 * [lua-resty-mvc](https://github.com/pronan/lua-resty-mvc) — You don't need that complicated MVC framework! With just a plain folder with several simple files, you can enjoy basic but most frequently used MVC features.
 * [lua-resty-memcached](https://github.com/openresty/lua-resty-memcached) — Lua memcached client driver for the ngx_lua based on the cosocket API
 * [lua-resty-redis](https://github.com/openresty/lua-resty-redis) — Lua Redis client driver for the ngx_lua based on the cosocket API
 * [lua-resty-redis-connector](https://github.com/pintsized/lua-resty-redis-connector) — Connection utilities for lua-resty-redis, making it easy and reliable to connect to Redis hosts, either directly or via Redis Sentinel
+* [resty-redis-cluster](https://github.com/steve0511/resty-redis-cluster) — OpenResty Redis cluster-aware client based on resty-redis-cluster
 * [lua-resty-redis-cluster](https://github.com/cuiweixie/lua-resty-redis-cluster) — OpenResty Redis Cluster Client
 * [lua-cassandra](https://github.com/thibaultCha/lua-cassandra) - Pure Lua, feature-rich, and cluster-aware Cassandra client
 * [lua-resty-cassandra](https://github.com/jbochi/lua-resty-cassandra) — Pure Lua Cassandra client using CQL binary protocol
 * [lua-resty-bloomd](https://github.com/jie123108/lua-resty-bloomd) — A client library based on ngx_lua to interface with [bloomd servers](https://github.com/armon/bloomd)
 * [lua-resty-riak](https://github.com/bakins/lua-resty-riak) — Lua riak protocol buffer client driver for the ngx_lua based on the cosocket API
+* [lua-resty-moongoo](https://github.com/isage/lua-resty-moongoo) — MongoDB library for OpenResty, highly inspired by Perl Mango
 * [lua-resty-mongol](https://github.com/Olivine-Labs/resty-mongol/) — Native Lua Mongodb driver which supports both luasocket and ngx_lua based on the cosocket API
 * [lua-resty-mongo](https://github.com/nightsailer/lua-resty-mongo) — Lua mongodb client driver for the ngx_lua based on the cosocket API
 * [lua-mongo](https://github.com/boyxuper/lua-mongo) — A simple Lua Mongo driver (a fork made to work with co-sockets)
@@ -375,7 +380,8 @@ Core Libraries are bundled in OpenResty package, and you don't need to separatel
 
 #### Utilities
 
-* [lua-resty-worker-events](https://github.com/Mashape/lua-resty-worker-events) — Inter process events for Nginx worker processes
+* [lua-resty-worker-manager](https://github.com/Kong/lua-resty-worker-manager) — Tracks worker processes and nodes starting / restarting / reloading / stopping
+* [lua-resty-worker-events](https://github.com/Kong/lua-resty-worker-events) — Inter process events for Nginx worker processes
 * [lua-resty-batch](https://github.com/starius/lua-resty-batch) — Merge multiple requests in nginx to a single sub-request
 * [lua-resty-shell](https://github.com/juce/lua-resty-shell) — Tiny non-blocking subprocess / shell library to use with OpenResty application server (using [sockproc](https://github.com/juce/sockproc))
 * [lua-resty-exec](https://github.com/jprjr/lua-resty-exec) — Non-blocking, non-shell-spawning, streaming and non-streaming subprocess library (using [sockexec](https://github.com/jprjr/sockexec))
@@ -422,6 +428,11 @@ These libraries are not build to using `lua-nginx-module`s date time functions (
 * [lua-resty-unistring](https://github.com/bungle/lua-resty-unistring) — LuaJIT FFI bindings for GNU libunistring - A Unicode string manipulation lIbrary (https://www.gnu.org/software/libunistring/)
 * [lua-resty-htmlentities](https://github.com/detailyang/lua-resty-htmlentities) — Backport the entities to LuaJIT with the FFI binding as the entities to UTF-8 decoder
 * [lua-resty-jsdecode](https://github.com/detailyang/lua-resty-jsdecode) — Javascript Escape Notation decoding to UTF-8 bytes
+
+#### Binary Formats
+
+* [lua-resty-msgpack](https://github.com/chronolaw/lua-resty-msgpack) — Lua Message Pack for OpenResty
+* [luajit-msgpack-pure](https://github.com/catwell/luajit-msgpack-pure) — MessagePack for LuaJIT (using FFI, no bindings, V4 API)
 
 #### Document Formats
 
